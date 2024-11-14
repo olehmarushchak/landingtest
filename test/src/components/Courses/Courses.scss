@@ -1,0 +1,30 @@
+@import "../../styles/utils";
+
+.Courses {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 120px;
+
+  &__title {
+    margin-top: 50px;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    max-width: $max-screen-width;
+
+    @include h2;
+    text-transform: uppercase;
+    color: $main-bg;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    width: 100%;
+    max-width: $max-screen-width;
+
+    & > :not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

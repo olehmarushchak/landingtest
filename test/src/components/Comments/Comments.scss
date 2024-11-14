@@ -1,0 +1,82 @@
+@import "../../styles/utils";
+
+.Comments {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  width: 100%;
+
+  &__container {
+    max-width: $max-screen-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include h2;
+    text-transform: uppercase;
+    color: $main-bg;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 221px;
+    border: 1px solid $border-gray;
+    border-radius: 100px;
+
+    &__pag {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 69px;
+
+      &__item {
+        cursor: pointer;
+        width: 14px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: $button-color;
+        @include transition;
+
+        &:hover {
+          width: 24px;
+          background-color: $main-bg;
+        }
+      }
+    }
+
+    &__button {
+      cursor: pointer;
+      background-image: url(../../../public/icons/buttonArrow.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $button-color;
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+
+      @include transition;
+
+      &--left {
+        background-image: url(../../../public/icons/leftArrow.svg);
+      }
+
+      &:hover {
+        background-color: $main-bg;
+      }
+    }
+  }
+}

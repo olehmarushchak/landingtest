@@ -1,0 +1,35 @@
+@import "../../../styles/utils";
+
+.NavList {
+  &__items {
+    display: flex;
+
+    & :not(:last-child) {
+      margin-right: $nth-margin-right;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 1px;
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    @include navLink;
+
+    &--arrow {
+      &::after {
+        margin-left: 4px;
+        content: url("../../../../public/icons/arrow.svg");
+        display: flex;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

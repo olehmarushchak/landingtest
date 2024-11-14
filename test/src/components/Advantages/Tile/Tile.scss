@@ -1,0 +1,44 @@
+@import "../../../styles/utils";
+
+.Tile {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: $width-tile;
+  height: $height-tile;
+  @include borderRadiusMini;
+  background-color: $white-bg;
+
+  &__icon {
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: $size-icon;
+    height: $size-icon;
+
+    &--rocket {
+      background: url(../../../../public/icons/Rocket.svg);
+    }
+
+    &--light {
+      background: url(../../../../public/icons/Light.svg);
+    }
+
+    &--book {
+      background: url(../../../../public/icons/Book.svg);
+    }
+  }
+
+  &__title {
+    @include h4;
+    color: $main-bg;
+    text-transform: uppercase;
+  }
+
+  &__p {
+    @include p;
+    color: $black-bg;
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../styles/utils";
+
+.Main {
+  margin-top: $height-nav-head;
+  position: relative;
+  display: block;
+  width: 100%;
+  transform: translate(-50%);
+  left: 50%;
+}

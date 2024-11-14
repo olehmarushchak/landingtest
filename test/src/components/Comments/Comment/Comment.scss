@@ -1,0 +1,62 @@
+@import "../../../styles/utils";
+
+.Comment {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 20px;
+
+  border: 1px solid $main-bg;
+  border-radius: 12px;
+
+  &:first-child {
+    margin-right: 12px;
+  }
+
+  &:last-child {
+    margin-left: 12px;
+  }
+
+  &__img {
+    margin-right: 20px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+
+    &__name {
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+
+    &__role-name {
+      @include p;
+      color: $DKgray-bg;
+    }
+
+    &__stars {
+      display: flex;
+      margin-bottom: 16px;
+
+      & > :not(:last-child) {
+        margin-right: 2px;
+      }
+    }
+
+    &__star {
+      background-image: url(../../../../public/icons/Star.svg);
+      background-size: cover;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

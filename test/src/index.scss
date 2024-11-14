@@ -1,0 +1,30 @@
+@import "./styles/_reset.scss";
+@import "./styles/utils";
+.anchor-target {
+  position: relative;
+}
+
+.anchor-target::before {
+  content: "";
+  display: block;
+  height: 100px; 
+  margin-top: -80px; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $white-bg;
+  position: relative;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

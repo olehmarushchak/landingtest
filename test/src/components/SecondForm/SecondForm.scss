@@ -1,0 +1,159 @@
+@import "../../styles/utils";
+
+.container {
+  display: flex;
+}
+
+.SecondForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__container {
+    text-align: left;
+    width: 100%;
+    max-width: $max-screen-width;
+  }
+
+  &__title {
+    @include h2;
+    text-transform: uppercase;
+    color: $main-bg;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    margin-right: 12px;
+
+    width: 60%;
+    & > :not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__item {
+      padding: 40px;
+      border: 1px solid $main-bg;
+      @include borderRadius;
+
+      &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include p;
+        font-weight: 500;
+
+        &--minus {
+          padding-bottom: 30px;
+        }
+      }
+
+      &__active {
+        border-top: 1px solid $main-bg;
+        padding-top: 30px;
+        width: 612px;
+      }
+
+      &__img {
+        background-image: url(../../../public/icons/ButtonFAQ.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+
+        &--minus {
+          background-image: url(../../../public/icons/ButtonFAQminus.svg);
+        }
+      }
+    }
+  }
+
+  &__right {
+    margin-left: 12px;
+    width: 40%;
+    padding: 57px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-bg;
+    @include borderRadius;
+
+    &__title {
+      @include h4;
+      text-transform: uppercase;
+      color: $white-bg;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $white-bg;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    &__form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      @include p;
+
+      & > :not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &__input {
+        border-radius: 4px;
+        padding: 18.5px 14px;
+        display: block;
+        width: 100%;
+        background-color: $white-bg;
+
+        &::placeholder {
+          color: $black-bg;
+        }
+
+        &:hover {
+          background-color: $LGgray-bg;
+        }
+
+        &:focus {
+          background-color: $gray-bg;
+        }
+      }
+
+      &__textarea {
+        padding: 18.5px 14px;
+        height: 114px;
+        border-radius: 4px;
+        background-color: $white-bg;
+        display: block;
+        width: 100%;
+        resize: none;
+
+        &::placeholder {
+          color: $black-bg;
+        }
+
+        &:hover {
+          background-color: $LGgray-bg;
+        }
+
+        &:focus {
+          background-color: $gray-bg;
+        }
+      }
+
+      &__button {
+        margin-top: 40px;
+        width: 235px;
+        @include buttonWhite;
+
+        &:hover {
+          background-color: $LGgray-bg;
+        }
+
+        &:focus {
+          background-color: $gray-bg;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@import "../../styles/utils";
+
+.AboutUs {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    height: 63px;
+    align-items: center;
+    width: 100%;
+    max-width: $max-screen-width;
+    margin-bottom: 20px;
+
+    &__title {
+      @include h2;
+      color: $main-bg;
+      text-transform: uppercase;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      @include afterButton;
+
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      text-transform: uppercase;
+    }
+  }
+
+  &__bottom {
+    height: 575px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: $max-screen-width;
+
+    &__info {
+      width: 60%;
+      height: 100%;
+      margin-left: 24px;
+
+      &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        text-align: left;
+        padding: 22px 34px;
+
+        height: 60%;
+        @include borderRadiusMini;
+        background-color: $main-bg;
+
+        &__title {
+          @include h3;
+          text-transform: uppercase;
+          color: $white-bg;
+        }
+
+        &__p {
+          @include p;
+          color: $white-bg;
+        }
+      }
+
+      &__bottom {
+        margin-top: 30px;
+        display: flex;
+        height: 35%;
+
+        &__left {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-right: 12px;
+          color: $white-bg;
+
+          @include borderRadiusMini;
+          background-color: $main-bg;
+
+          height: 100%;
+          width: 50%;
+
+          &__title {
+            @include h3;
+          }
+
+          &__p {
+            @include p;
+          }
+        }
+
+        &__right {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-left: 12px;
+          color: $white-bg;
+
+          @include borderRadiusMini;
+          background-color: $main-bg;
+
+          height: 100%;
+          width: 50%;
+
+          &__title {
+            @include h3;
+          }
+
+          &__p {
+            @include p;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../styles/utils";
+
+.TopPage {
+  display: flex;
+  justify-content: space-between;
+  height: 70vh;
+  min-height: 500px;
+  padding: 50px 20px;
+
+  &__firstPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include borderRadius;
+    background-color: $main-bg;
+    width: 70%;
+    margin-right: 16px;
+    padding: 10vmin 80px;
+    height: 100%;
+
+    &__h1 {
+      @include h1;
+      text-transform: uppercase;
+      color: $white-bg;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__p {
+        @include p;
+        text-align: left;
+        color: $white-bg;
+      }
+
+      &__button {
+        margin-top: 40px;
+        width: fit-content;
+        @include buttonWhite;
+
+        &:hover {
+          background-color: $button-color;
+        }
+      }
+    }
+  }
+
+  &__secondPart {
+    @include borderRadius;
+    background-image: url(../../../public/icons/Img-top.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: 100%;
+  }
+}

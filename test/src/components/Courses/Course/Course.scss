@@ -1,0 +1,178 @@
+@import "../../../styles/utils";
+
+.Course {
+  width: 100%;
+  max-width: $max-screen-width;
+  @include borderRadius;
+  border: 2px solid $main-bg;
+  padding: 40px;
+  text-align: left;
+
+  & > &__list :last-child {
+    margin-bottom: 24px;
+  }
+
+  &__top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      @include h4;
+      text-transform: uppercase;
+      color: $main-bg;
+
+      @include afterItem;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      @include p;
+      color: $main-bg;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      @include afterButton;
+    }
+  }
+
+  &__features {
+    display: flex;
+    margin-bottom: 40px;
+
+    & > :not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &__feature {
+      padding: 11px 16px;
+      background-color: $LGgray-bg;
+      border-radius: 45px;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+
+      &--oclock {
+        &::before {
+          content: "";
+          background-size: contain;
+          background-image: url(../../../../public/icons/oclock.svg);
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          margin: 8px;
+        }
+      }
+
+      &--paper {
+        &::before {
+          content: "";
+          background-size: contain;
+          background-image: url(../../../../public/icons/paper.svg);
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          margin: 8px;
+        }
+      }
+
+      &--monitor {
+        &::before {
+          content: "";
+          background-size: contain;
+          background-image: url(../../../../public/icons/monitor.svg);
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          margin: 8px;
+        }
+      }
+
+      &--eng {
+        &::before {
+          content: "";
+          background-size: contain;
+          background-image: url(../../../../public/icons/eng.svg);
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          margin: 8px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    @include p;
+    text-transform: uppercase;
+    color: $main-bg;
+    font-weight: 500;
+  }
+
+  &__list {
+    @include p;
+    font-weight: 500;
+
+    margin-top: 16px;
+
+    & > :first-child {
+      margin-top: 8px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 400;
+
+      &::before {
+        content: "";
+        background-image: url(../../../../public/icons/Form-Validation-Check-1--Streamline-Freehand.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+      }
+    }
+  }
+
+  &__price {
+    margin-bottom: 40px;
+    display: block;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-transform: uppercase;
+    color: $main-bg;
+  }
+
+  &__button {
+    @include buttonBlue;
+    width: 216px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $button-color;
+    }
+  }
+}
